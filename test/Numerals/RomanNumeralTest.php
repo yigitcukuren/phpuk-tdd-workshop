@@ -16,4 +16,14 @@ class RomanNumeralTest extends TestCase
     {
         $this->assertEquals('V', RomanNumeral::convertFromArabic(5));
     }
+
+    public function test10IsX()
+    {
+        $this->assertEquals('X', RomanNumeral::convertFromArabic(10));
+    }
+
+    public function test50IsL()
+    {
+        $this->assertEquals('L', RomanNumeral::convertFromArabic(50));
+    }
 }
