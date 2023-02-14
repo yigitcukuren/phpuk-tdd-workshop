@@ -12,18 +12,25 @@ class LeapYearCalculatorTest extends TestCase
         $this->assertFalse(LeapYearCalculator::isA(2023));
     }
 
-    public function test2024IsALeapYear()
+    public function testYearsDivisibleBy4AreTypicalLeapYears()
     {
         $this->assertTrue(LeapYearCalculator::isA(2024));
-    }
-
-    public function test2020IsALeapYear()
-    {
         $this->assertTrue(LeapYearCalculator::isA(2020));
+        $this->assertTrue(LeapYearCalculator::isA(1996));
     }
 
-    public function test1996IsALeapYear()
+    public function test1900IsNotALeapYear()
     {
-        $this->assertTrue(LeapYearCalculator::isA(1996));
+        $this->assertFalse(LeapYearCalculator::isA(1900));
+    }
+
+    public function test1700IsNotALeapYear()
+    {
+        $this->assertFalse(LeapYearCalculator::isA(1700));
+    }
+
+    public function test2100IsNotALeapYear()
+    {
+        $this->assertFalse(LeapYearCalculator::isA(2100));
     }
 }
