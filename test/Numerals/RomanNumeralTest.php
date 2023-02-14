@@ -12,9 +12,19 @@ class RomanNumeralTest extends TestCase
         $this->assertEquals('I', RomanNumeral::convertFromArabic(1));
     }
 
+    public function test4IsIV()
+    {
+        $this->assertEquals('IV', RomanNumeral::convertFromArabic(4));
+    }
+
     public function test5IsV()
     {
         $this->assertEquals('V', RomanNumeral::convertFromArabic(5));
+    }
+
+    public function test9IsIX()
+    {
+        $this->assertEquals('IX', RomanNumeral::convertFromArabic(9));
     }
 
     public function test10IsX()
@@ -22,8 +32,8 @@ class RomanNumeralTest extends TestCase
         $this->assertEquals('X', RomanNumeral::convertFromArabic(10));
     }
 
-    public function test50IsL()
+    public function test58IsL()
     {
-        $this->assertEquals('L', RomanNumeral::convertFromArabic(50));
+        $this->assertEquals('LVIII', RomanNumeral::convertFromArabic(58));
     }
 }
