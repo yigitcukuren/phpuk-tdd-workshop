@@ -6,7 +6,12 @@ class LeapYearCalculator
 {
     public static function isA(int $year)
     {
-        if ($year == 1900 || $year == 1700) {
+
+        if (self::isATypicalLeapYear($year)) {
+            return true;
+        }
+
+        if (self::isATypicalCommonYear($year)) {
             return false;
         }
 
@@ -20,5 +25,23 @@ class LeapYearCalculator
     public static function isTypicalLeapYear(int $year)
     {
         return $year % 4 === 0;
+    }
+
+    /**
+     * @param int $year
+     * @return bool
+     */
+    public static function isATypicalCommonYear(int $year)
+    {
+        return $year % 100 === 0;
+    }
+
+    /**
+     * @param int $year
+     * @return bool
+     */
+    public static function isATypicalLeapYear(int $year)
+    {
+        return $year % 400 === 0;
     }
 }

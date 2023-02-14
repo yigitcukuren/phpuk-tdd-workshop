@@ -33,4 +33,14 @@ class LeapYearCalculatorTest extends TestCase
     {
         $this->assertFalse(LeapYearCalculator::isA(2100));
     }
+
+    public function test2000IsALeapYear()
+    {
+        $this->assertTrue(LeapYearCalculator::isA(2000));
+    }
+
+    public function test2400IsALeapYear()
+    {
+        $this->assertTrue(LeapYearCalculator::isA(2400));
+    }
 }
