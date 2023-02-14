@@ -6,6 +6,6 @@ class LeapYearCalculator
 {
     public static function isA(int $year)
     {
-        return $year === 2024 || $year === 2020;
+        return $year % 4 === 0;
     }
 }

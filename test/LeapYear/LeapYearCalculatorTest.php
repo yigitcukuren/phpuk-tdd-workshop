@@ -21,4 +21,9 @@ class LeapYearCalculatorTest extends TestCase
     {
         $this->assertTrue(LeapYearCalculator::isA(2020));
     }
+
+    public function test1996IsALeapYear()
+    {
+        $this->assertTrue(LeapYearCalculator::isA(1996));
+    }
 }
